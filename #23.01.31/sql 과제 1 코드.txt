@@ -1,0 +1,6 @@
+select CategoryName, CategoryID, count(*)
+from(select *
+from Products as a
+join Categories as b
+on a.CategoryID=b.CategoryID)
+group by CategoryID
